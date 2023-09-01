@@ -1,0 +1,19 @@
+<Project>
+
+  <!-- 输出路径 -->
+  <PropertyGroup>
+    <BaseOutputPath>..\..\artifacts\$(Configuration)\</BaseOutputPath>
+
+    <OutputPath>$(BaseOutputPath)\$(MSBuildProjectName)\</OutputPath>
+    <!--<BaseIntermediateOutputPath>..\..\artifacts\intermediates\$(Configuration)\$(MSBuildProjectName)\</BaseIntermediateOutputPath>-->
+    <IntermediateOutputPath>..\..\artifacts\intermediates\$(MSBuildProjectName)\</IntermediateOutputPath>
+    <GeneratedFilesDir>..\..\artifacts\intermediates\$(MSBuildProjectName)\Generated Files\</GeneratedFilesDir>
+  </PropertyGroup>
+  
+  <!-- 每个项目所需的包 -->
+  <ItemGroup>
+    <!-- 代码分析器 -->
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+    </PackageReference>
+  </ItemGroup>
+</Project>
